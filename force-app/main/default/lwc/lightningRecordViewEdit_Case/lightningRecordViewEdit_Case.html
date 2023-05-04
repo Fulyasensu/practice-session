@@ -1,0 +1,31 @@
+<template>
+  <lightning-card>
+    <!--Lighning Record Edit Form-->
+<div class="slds-varm-around_medium">
+    <lightning-record-edit-form
+    record-id={recordId}
+    object-api-name={objName}>
+    <lightning-input-field-name{fields.Subject}></lightning-input-field-name>
+    <lightning-input-field-name{fields.Status}></lightning-input-field-name>
+    <lightning-input-field-name{fields.origin}></lightning-input-field-name>
+   </lightning-record-edit-form>
+
+   </div>
+</lightning-record-edit-form>
+
+
+</div>
+  
+<div class="slds-varm-around_medium">
+    <lightning-record-view-form
+object-api-name={objName}
+record-id={recordId}>
+<lightning-output-field fields name={fields.Subject}></lightning-output-field>
+<lightning-output-field fields name={fields.Status}></lightning-output-field>
+<lightning-output-field fields name={fields.origin}></lightning-output-field>
+
+
+</lightning-record-view-form>
+</div>
+  </lightning-card>  
+</template>
