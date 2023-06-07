@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Create Record - Contact" icon-name="standard:contact">
+        <div class="slds-var-m-around_medium">
+           <form>
+            <lightning-input type="text" label="First Name" name="FirstName" placeholder="type here..." onchange={changeHandler}></lightning-input>
+            <lightning-input type="text" label="Last Name" name="LastName" placeholder="type here..." onchange={changeHandler}></lightning-input>
+            <lightning-input type="email" label="Email" name="Email" onchange={changeHandler}></lightning-input>
+            <div class="slds-align_absolute-center">
+            <lightning-button label="Reset" onclick={resetForm}></lightning-button>
+        </div>
+
+           <lightning-button variant="brand" label="Create Contact" class="slds-align_absolute-center slds-var-m-top_small" onclick={createRecordContact}></lightning-button>
+           </form>            
+        </div>
+    </lightning-card>
+</template>

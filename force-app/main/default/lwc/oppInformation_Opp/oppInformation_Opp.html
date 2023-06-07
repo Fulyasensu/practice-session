@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title ="getPicklistValues">
+       <div class="slds-var-m-around_medium">
+      <lightning-input type="text"  
+      label="Opportunity Name"
+      value={OppName}
+      onchange= {NameHandler}>
+
+    </lightning-input>
+        <lightning-combobox
+        label="Type"
+        options={typeOption}
+        onchange={TypeHandler}>
+    </lightning-combobox>
+
+    <lightning-combobox
+        label="Stage"
+        options={StageOption}
+        onchange={StageHandler}>
+    </lightning-combobox>
+</div>
+<div class="slds-var-m-around_medium">
+    Thanks for choosing the correct information. You have entered <br/>
+    <template lwc:if={OppName1}>
+        Opp Name ={OppName1}<br/>
+    </template>
+    <template lwc:if={OppType}>
+        Opp Type ={OppType}<br/>
+    </template>
+    <template lwc:if={OppStage}>
+        Opp Stage ={OppStage}
+    </template>
+</div>
+
+
+    </lightning-card>
+</template>
